@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lint:fix": "eslint --fix .",
+    "check-types": "tsc --noEmit --pretty",
+    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
+    "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "upgrade:next": "bunx @next/codemod@latest upgrade latest",
+    "upgrade:tailwind": "bunx @tailwindcss/upgrade@latest"
   },
   "dependencies": {
     "next": "16.1.1",
@@ -15,12 +21,17 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@total-typescript/ts-reset": "^0.6.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "prettier": "^3.7.4",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
