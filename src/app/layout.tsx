@@ -4,6 +4,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import { TRPCReactProvider } from "@/trpc/client";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -22,7 +24,9 @@ export default function RootLayout({
   return (
     <ClerkProvider afterSignOutUrl="/">
       <html lang="en">
-        <body className={`${inter.variable} antialiased`}>{children}</body>
+        <body className={`${inter.variable} antialiased`}>
+          <TRPCReactProvider>{children}</TRPCReactProvider>
+        </body>
       </html>
     </ClerkProvider>
   );
