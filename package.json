@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:webhook": "ngrok http --url=charisse-subvermiform-charline.ngrok-free.dev 3000 ",
+    "dev:all": "concurrently \"bun run dev\" \"bun run dev:webhook\"",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -62,6 +64,7 @@
     "react-resizable-panels": "^4.3.3",
     "recharts": "2.15.4",
     "sonner": "^2.0.7",
+    "svix": "^1.84.1",
     "tailwind-merge": "^3.4.0",
     "vaul": "^1.1.2",
     "zod": "^4.3.5"
@@ -73,6 +76,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
+    "concurrently": "^9.2.1",
     "drizzle-kit": "^0.31.8",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
