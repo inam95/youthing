@@ -31,7 +31,7 @@ const items = [
   },
 ];
 
-export default function MainSection() {
+export function MainSection() {
   const { isSignedIn } = useAuth();
   const clerk = useClerk();
 

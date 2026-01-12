@@ -1,6 +1,6 @@
 import { SearchIcon } from "lucide-react";
 
-export default function SearchInput() {
+export function SearchInput() {
   return (
     <form className="flex w-full max-w-[600px]">
       <div className="relative w-full">
